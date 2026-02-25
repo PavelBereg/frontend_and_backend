@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!-- ХЕДЕР (Активна вкладка Контакты) -->
+    <!-- ХЕДЕР -->
     <nav class="navbar is-fixed-top has-shadow">
         <div class="container">
             <div class="navbar-brand">
@@ -38,28 +38,43 @@
                 <!-- Левая колонка: Форма -->
                 <div class="column is-6">
                     <div class="box">
-                        <form action="#">
+                        <!-- Добавлен id для формы -->
+                        <form id="feedbackForm" novalidate>
+                            
+                            <!-- ФИО -->
                             <div class="field">
-                                <label class="label">Имя</label>
+                                <label class="label">ФИО <span class="has-text-danger">*</span></label>
                                 <div class="control has-icons-left">
-                                    <input class="input" type="text" placeholder="Ваше имя" required>
+                                    <input class="input" type="text" id="fullname" placeholder="Иванов Иван Иванович">
                                     <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
                                 </div>
                             </div>
 
+                            <!-- Телефон -->
                             <div class="field">
-                                <label class="label">Email</label>
+                                <label class="label">Телефон <span class="has-text-danger">*</span></label>
                                 <div class="control has-icons-left">
-                                    <input class="input" type="email" placeholder="hello@example.com" required>
+                                    <input class="input" type="tel" id="phone" placeholder="+7 (999) 000-00-00">
+                                    <span class="icon is-small is-left"><i class="fas fa-phone"></i></span>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="field">
+                                <label class="label">Email <span class="has-text-danger">*</span></label>
+                                <div class="control has-icons-left">
+                                    <input class="input" type="email" id="email" placeholder="hello@example.com">
                                     <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
                                 </div>
                             </div>
 
+                            <!-- Тема -->
                             <div class="field">
                                 <label class="label">Тема</label>
                                 <div class="control">
                                     <div class="select is-fullwidth">
-                                        <select>
+                                        <select id="topic">
+                                            <option disabled selected value="">Выберите тему</option>
                                             <option>Запись на курс</option>
                                             <option>Вопрос ментору</option>
                                             <option>Другое</option>
@@ -71,22 +86,26 @@
                             <div class="field">
                                 <label class="label">Сообщение</label>
                                 <div class="control">
-                                    <textarea class="textarea" placeholder="Напишите ваш вопрос..."></textarea>
+                                    <textarea class="textarea" id="message" placeholder="Напишите ваш вопрос..."></textarea>
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
                                     <label class="checkbox">
-                                        <input type="checkbox" required>
-                                        Я согласен на обработку данных
+                                        <input type="checkbox" id="agreement">
+                                        Я согласен на обработку персональных данных
                                     </label>
                                 </div>
                             </div>
 
-                            <div class="field">
+                            <!-- Кнопки -->
+                            <div class="field is-grouped">
                                 <div class="control">
-                                    <button class="button is-link is-fullwidth">Отправить</button>
+                                    <button type="submit" class="button is-link">Отправить</button>
+                                </div>
+                                <div class="control">
+                                    <button type="reset" class="button is-light">Очистить</button>
                                 </div>
                             </div>
                         </form>
@@ -122,9 +141,12 @@
     <!-- ФУТЕР -->
     <footer class="footer has-background-dark has-text-white">
         <div class="content has-text-centered">
-            <p>© 2025 CodeStart Inc.</p>
+            <p>© 2026 CodeStart Inc.</p>
         </div>
     </footer>
 
+    <!-- ПОДКЛЮЧЕНИЕ СКРИПТОВ -->
+    <script src="scripts/validation.js"></script>
+    <script src="scripts/consoleLogger.js"></script>
 </body>
 </html>
