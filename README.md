@@ -9,4 +9,4 @@
 
 **Технологии:** JavaScript (CustomEvents, DOM API), Bulma CSS.
 
-**Ссылка на сайт:** https://pavelbereg.github.io/fronted_and_backend_pr2/contacts.html
+**Ссылка на сайт:** [https://pavelbereg.github.io/fronted_and_backend_pr/contacts.html](https://pavelbereg.github.io/frontend_and_backend/)
